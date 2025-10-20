@@ -27,9 +27,6 @@ RUN pip3 install --no-cache-dir --break-system-packages \
 # Ensure workspace directory exists
 WORKDIR /config/workspace
 
-# Switch back to the default user
-USER abc
-
 # Port is already exposed in base image, but declared for clarity
 EXPOSE 8443
 
