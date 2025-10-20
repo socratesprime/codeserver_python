@@ -11,7 +11,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=America/Vancouver
-      - PASSWORD=yourstrongpassword
+      - PASSWORD=yourstrongpassword #override environment variable in portainer
     volumes:
       - /mnt/NVME_Pool/Prime_APPs/Docker_Stacks/Vs_Code_Server/Config:/config
     ports:
