@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  code-server:
+    build:
+      context: .
+      dockerfile: dockerfile
+    image: my-code-server-python:latest
+    container_name: code-server-python
+    environment:
+      - PUID=568
+      - PGID=568
+      - TZ=America/Vancouver
+      - PASSWORD=yourstrongpassword
+    volumes:
+      - /mnt/NVME_Pool/Prime_APPs/Docker_Stacks/Vs_Code_Server/Config:/config
+    ports:
+      - "9876:8443"
+    restart: unless-stopped
